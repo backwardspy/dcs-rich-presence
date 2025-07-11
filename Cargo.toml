@@ -1,0 +1,10 @@
+[package]
+name = "dcs-rich-presence"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+anyhow = "1.0.98"
+discord-rich-presence = { git = "https://github.com/vionya/discord-rich-presence.git" }
+tracing = "0.1.41"
+tracing-subscriber = "0.3.19"
