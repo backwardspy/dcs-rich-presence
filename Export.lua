@@ -10,8 +10,8 @@ local RETRY_TIME  = 15
 local UPDATE_TIME = 15
 
 local function connect()
-    local sock = socket.connect("localhost", 14242)
-    if sock then sock:setoption("tcp-nodelay", true) end
+    local sock = socket.udp()
+    sock:setpeername("localhost", 14242)
     return sock
 end
 
@@ -19,7 +19,7 @@ function LuaExportStart() end
 
 function LuaExportStop()
     if conn then
-        conn:send("bye\n")
+        conn:send("bye")
         conn:close()
     end
 end
@@ -43,7 +43,7 @@ function LuaExportActivityNextEvent(t)
     local alt_bar = LoGetAltitudeAboveSeaLevel()
 
     local sent = conn:send(string.format(
-        "telem %s,%s,%f,%f,%d\n",
+        "telem %s,%s,%f,%f,%d",
         name, vehicle, ias, alt_bar, t
     ))
     if not sent then conn = nil end
