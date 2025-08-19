@@ -1,2 +1,4 @@
-/target
-/.ra-target
+target/
+.ra-target/
+assets/icons/
+.vscode/

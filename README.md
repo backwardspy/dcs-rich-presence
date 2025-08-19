@@ -4,7 +4,7 @@
 
 ## usage
 
-1. put [`Export.lua`](./Export.lua) into your DCS user data `Scripts/` directory (on windows defaults to `%USERPROFILE%/Saved Games/DCS/Scripts`)
+1. put [`dcs-rich-presence-hook.lua`](./dcs-rich-presence-hook.lua) into your DCS user data `Scripts/Hooks/` directory (on windows defaults to `%USERPROFILE%/Saved Games/DCS/Scripts/Hooks`)
 2. grab the [latest release](https://github.com/backwardspy/dcs-rich-presence/releases/latest) and run it.
 
 ## how it works
