@@ -16,4 +16,4 @@ the export script sends telemetry every 15 seconds to the server binary over UDP
 contributions very welcome!
 
 - build/package for linux
-- add per-module [assets](https://discord.com/developers/docs/rich-presence/overview#assets) to use for the "small image", to display what you're currently flying
+- ~~add per-module [assets](https://discord.com/developers/docs/rich-presence/overview#assets) to use for the "small image", to display what you're currently flying~~ ✅
