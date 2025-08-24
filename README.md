@@ -1,6 +1,7 @@
 # discord rich presence for DCS
 
-![preview screenshot](assets/preview.png)
+![screenshot of the app window](assets/window.png)
+![screenshot of the discord rich presence](assets/richpresence.png)
 
 ## usage
 

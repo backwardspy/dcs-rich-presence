@@ -253,8 +253,15 @@ fn main() -> anyhow::Result<()> {
 
     iced::application("DCS Rich Presence", State::update, State::view)
         .subscription(State::subscription)
-        .window_size((320.0, 100.0))
-        .resizable(false)
+        .window(window::Settings {
+            size: (350.0, 110.0).into(),
+            resizable: false,
+            icon: Some(window::icon::from_file_data(
+                include_bytes!("../assets/icon.ico"),
+                None,
+            )?),
+            ..Default::default()
+        })
         .theme(|_| match dark_light::detect().unwrap() {
             Mode::Dark => Theme::CatppuccinMocha,
             Mode::Light | Mode::Unspecified => Theme::CatppuccinLatte,
